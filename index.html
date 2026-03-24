@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Icônique Immobilier</title>
+<style>
+body { font-family: Arial, sans-serif; margin:0; padding:0; background: #ffffff; color: #000; }
+header { background: #2c3e50; color: #fff; padding: 20px; text-align: center; display: flex; align-items: center; justify-content: center; gap: 15px; }
+header img { height: 60px; }
+h1 { margin: 0; }
+.container { padding: 20px; }
+.bien { background: #f5f5f5; padding: 15px; margin-bottom: 15px; border-radius: 5px; }
+.like { color: red; cursor: pointer; }
+label { display: block; margin-top: 10px; }
+input, select, textarea { width: 100%; padding: 8px; margin-top: 5px; }
+button { padding: 10px 20px; margin-top: 10px; background: #2c3e50; color: #fff; border: none; cursor: pointer; }
+a { color: #2c3e50; text-decoration: none; }
+</style>
+</head>
+<body>
+
+<header>
+<img src="logo.png" alt="Icônique Immobilier">
+<div>
+<h1>Icônique Immobilier</h1>
+<p>Contactez-nous sur WhatsApp : <a href="https://wa.me/242067978776" target="_blank">+242 067978776</a></p>
+</div>
+</header>
+
+<div class="container">
+
+<!-- Exemples d'annonces par arrondissement et quartiers -->
+<div class="bien">
+<h2>Maison à louer</h2>
+<p>Arrondissement : <span contenteditable="true">Talangaï</span></p>
+<p>Quartier : <span contenteditable="true">Madibou</span></p>
+<p>Prix : <span contenteditable="true">250 000 FCFA / mois</span></p>
+<p>Eau/Électricité : <span contenteditable="true">Inclus / Non inclus</span></p>
+<p>Description : <span contenteditable="true">Maison avec cour commune, 3 chambres...</span></p>
+<p>Catégorie : <span contenteditable="true">Maison</span></p>
+<button class="like" onclick="like(this)">❤ Favori</button>
+</div>
+
+<div class="bien">
+<h2>Appartement à louer</h2>
+<p>Arrondissement : <span contenteditable="true">Makélékélé</span></p>
+<p>Quartier : <span contenteditable="true">Mikalou</span></p>
+<p>Prix : <span contenteditable="true">150 000 FCFA / mois</span></p>
+<p>Eau/Électricité : <span contenteditable="true">Inclus / Non inclus</span></p>
+<p>Description : <span contenteditable="true">Appartement 2 chambres, salon, cuisine...</span></p>
+<p>Catégorie : <span contenteditable="true">Appartement</span></p>
+<button class="like" onclick="like(this)">❤ Favori</button>
+</div>
+
+<!-- Formulaire contact -->
+<h2>Demander plus d’informations</h2>
+<form>
+<label>Nom :</label>
+<input type="text" placeholder="Votre nom" required>
+<label>Téléphone / WhatsApp :</label>
+<input type="text" placeholder="Votre numéro" required>
+<label>Message :</label>
+<textarea placeholder="Votre message" required></textarea>
+<button type="submit">Envoyer</button>
+</form>
+
+<!-- Carte -->
+<h2>Localisation</h2>
+<p>Ajoutez ici le lien Google Maps de votre bien ou agence :</p>
+<a href="https://www.google.com/maps/place/Talangaï,+Brazzaville" target="_blank">Voir la localisation</a>
+
+<!-- Clauses légales -->
+<h2>Clauses légales</h2>
+<ul>
+<li>Loyer : 2 à 3 mois d’avance possible</li>
+<li>Dépôt bancaire facultatif</li>
+<li>Paiement : mensuel ou plusieurs mois à l’avance</li>
+<li>Pas de sous-location</li>
+<li>Animaux autorisés selon conditions</li>
+</ul>
+
+</div>
+
+<script>
+function like(button) {
+if(button.innerText === "❤ Favori") button.innerText = "💖 Favori ajouté";
+else button.innerText = "❤ Favori";
+}
+</script>
+
+</body>
+</html>
